@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Fibonacci sequence</h1>
+<p>
+    <!-- {% csrf_token %} -->
+    <a href="{% url 'add_home' %}">Try Adding 2 Numbers</a>
+</p>
+{% endblock %}
