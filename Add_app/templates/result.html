@@ -2,7 +2,7 @@
 {% block content %}
 Result is {{result}}
 <p>
-    <!-- {% csrf_token %} -->
+    {% csrf_token %}
     <a href="{% url 'Fibo' %}">Try Fibanoci </a>
 </p>
 {% endblock %}
