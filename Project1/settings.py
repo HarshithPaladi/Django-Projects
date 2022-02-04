@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "Add_app",
     "Fibanoci",
     "Random_Gen",
+    "test1"
 ]
 
 MIDDLEWARE = [

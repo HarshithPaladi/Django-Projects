@@ -22,4 +22,5 @@ urlpatterns = [
     path("Add/", include("Add_app.urls")),
     path("Fibanoci/", include("Fibanoci.urls")),
     path("Rgen/", include("Random_Gen.urls")),
+    path("test1/", include("test1.urls")),
 ]
