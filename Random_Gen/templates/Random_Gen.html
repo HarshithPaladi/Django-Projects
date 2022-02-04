@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if error %}
+<h2>ERROR</h2>
+<p>{{error}} <br>{{n}} > {{m}}</p>
+{% endif %}
+{% if seq %}
+<h1>Sequence : {{n}}, {{m}}</h1>
+<p>{{seq}}</p>
+{% endif %}
+{% endblock %}
