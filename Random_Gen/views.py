@@ -14,11 +14,13 @@ def Random_gen(request):
                 return render(request, 'Random_Gen.html', {'error': 'The number of elements in the sequence should be less than the maximum value',"n":n,"m":m})
             else:
                 seq = []
-                while len(seq) < n:
-                    r = random.randint(1, m)
+                while len(seq) < n-1:
+                    r = random.randint(-m, m-1) # Generate a random number between -m and m-1 so that the number is not in the sequence
                     if r not in seq:
                         seq.append(r)
-                seq.sort()
+                seq.append(m) # Appending the maximum value to the sequence
+                random.shuffle(seq) # Shuffling the sequence
+                #seq.sort()
                 return render(request, 'Random_Gen.html', {'seq': seq,"n":n,"m":m})
         else:
             return render(request, 'Random_Gen.html', {'error': 'The number of elements in the sequence should be greater than 0 and the maximum value should be greater than 0'})
