@@ -4,6 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 # Generate a sequence of random numbers with a given length n and maximum value m with no duplicates in the sequence and return the sequence as a csv file
 def Random_gen(request):
+    # TODO: Return the sequence of random numbers as a csv file
     if request.method == 'GET':
         return render(request, 'rand_enter.html')
     if request.method == 'POST':
@@ -18,8 +19,8 @@ def Random_gen(request):
                     r = random.randint(-m, m-1) # Generate a random number between -m and m-1 so that the number is not in the sequence
                     if r not in seq:
                         seq.append(r)
-                seq.append(m) # Appending the maximum value to the sequence
-                random.shuffle(seq) # Shuffling the sequence
+                seq.insert(random.randint(0,n-1),m) # Appending the maximum value to the sequence at a index randomly chosen
+                #random.shuffle(seq) # Shuffling the sequence
                 #seq.sort()
                 return render(request, 'Random_Gen.html', {'seq': seq,"n":n,"m":m})
         else:
