@@ -9,4 +9,4 @@ from django.http import HttpResponse
 def say_hello(request):
     # return HttpResponse("Hello World")
     # x = calculate()
-    return render(request,"hello.html", {"name":"Harshith Paladi"})
+    return render(request,"hello.html", {"name":"Harshith Paladi", "age":22})
