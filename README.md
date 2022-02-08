@@ -1,4 +1,5 @@
 # Django-Projects
+Some initial steps and syntax for Django and HTML
 | Number | Name | Link |
 |:- | :----: | :---: |
 | 1 | Django | [Github Gist](https://gist.github.com/HarshithPaladi/1655e2c8f093ff2a321de257a1eeb04d "Django Initial Steps") |
