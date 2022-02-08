@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>CREATE A STUDENT</h1>
+<form method ="POST">
+    <label>Name :</label><input name ="name" placeholder="Enter student name">
+    <br>
+    <br>
+    <label>Department :</label>
+    <select name ="dept">
+        {% for d in departments %}
+            <option value = "{{d.id}}">{{d.name}}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <br>
+    {% csrf_token %}
+    <input type = "submit" value ="Create Student">
+</form>
+
+{% endblock %}

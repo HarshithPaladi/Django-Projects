@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1> COURSE Dashboard</h1>
+    <table border = "1">
+        <thead align ="center">
+            <tr>
+                <td>ID</td><td>SUBJECT Name</td><td>SUB CODE</td><td>Teacher name</td><td>Student name</td>
+            </tr>
+
+        </thead>
+        <tbody>
+            {% for course in courses %}
+            <tr>
+                <td>{{course.id}}</td>
+                <td>{{course.subject.name}}</td>
+                <td>{{course.subject.code}}</td>
+                <td>{{course.teacher.name}}</td>
+                <td>{{course.student.name}}</td>
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+    <br><br>
+    <p><a href = "{% url 'create_enrollment' %}">CREATE A NEW COURSE Enrollment</a> </p>
+
+{% endblock %}

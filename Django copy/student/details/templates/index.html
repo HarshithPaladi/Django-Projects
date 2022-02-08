@@ -1,0 +1,30 @@
+<head>
+<title>Student details</title>
+</head>
+<body>
+    <form method="POST">
+        <label>First Name:</label>
+        <input name = "fname" type="text" placeholder = "firstname">
+        <br>
+        <input name = "lname" type= "text" placeholder="lastname">
+        <br>
+        <label>Year</label>
+        <select name ="year" id="year">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <br>
+        <label>marks</label>
+        <input name="mark 1" type="text">
+        <br>
+        <input name="mark 2" type="text">
+        <br>
+        <input name="mark 3" type="text">
+        <br>
+        <input type="submit" value="enter">
+    {% csrf_token %}
+    </form>
+</body>
+</html>

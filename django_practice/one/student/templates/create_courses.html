@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>CREATE A COURSE ENROLLMENT</h1>
+<form method ="POST">
+    <label>STUDENT :</label>
+    <select name = "student" >
+        {% for stud in students %}
+         <option value = "{{stud.id}}">{{stud.name}} | {{stud.dept.name}}</option>
+        {% endfor %}}
+    </select>
+    <br>
+    <br>
+    <label>TEACHER :</label>
+    <select name = "teacher" >
+        {% for teach in teachers %}
+         <option value = "{{teach.id}}">{{teach.name}} | {{teach.dept.name}}</option>
+        {% endfor %}}
+    </select>
+    <br>
+    <br>
+    <label>SUBJECT :</label>
+    <select name = "subject" >
+        {% for sub in subjects %}
+         <option value = "{{sub.id}}">{{sub.name}}</option>
+        {% endfor %}}
+    </select>
+    {% csrf_token %}
+    <input type = "submit" value ="Create Enrollment">
+</form>
+
+{% endblock %}

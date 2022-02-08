@@ -1,0 +1,44 @@
+<table border = 1>
+    <thead>
+        <tr>
+            <td>
+                SNO
+            </td>
+            <td>INDEX</td>
+            <td>
+                Subj code
+            </td>
+            <td>
+                Subject name
+            </td>
+            <td>
+                Marks
+            </td>
+        </tr>
+    </thead>
+    <tbody align = "center">
+        {% for m in marks %}
+        <tr>
+            <!--td><a href="/student/{{m.code}}">{{m.code}}</a></td-->
+            <td>{{ forloop.counter }} 
+                {% if forloop.last %} * 
+                {% endif %}</td>
+            
+            <td>{{ forloop.revcounter0 }}</td>
+            <td><a href="{% url "rakshit" m.code %}">{{m.code}}</a></td>
+            <td>{{m.name}}</td>
+            <td>{{m.Marks}}</td>
+            {% cycle 1213 "rra" %}
+        </tr>
+        {% endfor %}
+        <tr>    
+            <td>SUM:</td>
+            <td colspan="2">{{sum}}</td>
+        </tr>
+        <tr>   
+            <td>AVG:</td> 
+            <td colspan="2">{{average}}</td>
+        </tr>
+
+    </tbody>
+</table>

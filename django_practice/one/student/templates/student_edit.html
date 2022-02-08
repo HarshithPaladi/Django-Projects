@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+    <h1 align = "center">EDIT A STUDENT</h1>
+    <form method = "POST">
+        <label>Name:</label><input name = "name" placeholder="ENTER STUDENT NAME :">
+        <br>
+        <br>
+        <label>Student_id :</label><input name = "id" value = {{student.id}} disabled>
+        <br><br>
+        <label>Dept : </label>
+        <select name ="dept">
+            {% for d in departments %}
+                <option value = "{{d.id}}">{{d.name}}</option>
+            {% endfor %}
+        </select>
+        {% csrf_token %}
+        <input type ="submit" value = "EDIT">
+
+    </form>
+{% endblock %}

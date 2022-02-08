@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1> Student Dashboard</h1>
+    <table border = "1">
+        <thead align ="center">
+            <tr>
+                <td>ID</td><td>Name</td><td>Dept</td>
+            </tr>
+
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td><a href = "{% url 'studid' student.id %}">{{student.id}}</a></td>
+                <td>{{student.name}}</td>
+                <td>{{student.dept.name}}</td>
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+    <br><br>
+    <p><a href = "{% url 'create_student' %}">CREATE A NEW STUDENT</a> </p>
+
+{% endblock %}

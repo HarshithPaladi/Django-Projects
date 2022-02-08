@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1> TEACHER Dashboard</h1>
+    <table border = "1">
+        <thead align ="center">
+            <tr>
+                <td>ID</td><td>Name</td><td>Dept</td>
+            </tr>
+
+        </thead>
+        <tbody>
+            {% for teacher in teachers %}
+            <tr>
+                <td>{{teacher.id}}</td>
+                <td>{{teacher.name}}</td>
+                <td>{{teacher.dept.name}}</td>
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+    <br><br>
+    <p><a href = "{% url 'create_teachers' %}">CREATE A NEW TEACHER</a> </p>
+
+{% endblock %}
