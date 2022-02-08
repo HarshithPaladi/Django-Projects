@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 align = "center">Fibonacci sequence</h1>
+<form method ="POST">
+    <label>Enter value of N :</label>
+    <input name ="value" placeholder="1">
+    <br><br>
+    <input type="submit" value = "Enter">
+    {% csrf_token %}
+
+{% endblock %}

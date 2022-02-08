@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 align="center">Random Sequence Generator</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="n">Enter the length of the sequence: </label>
+    <input type="text" name="n"><br><br>
+    <label for="m">Enter the maximum number of the sequence:</label>
+    <input type="text" name="m"><br><br>
+    <input type="submit">
+</form>
+{% endblock %}
