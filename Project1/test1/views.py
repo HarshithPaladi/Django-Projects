@@ -11,4 +11,4 @@ def test(request):
         if n > m:
             return render(request, 'out.html', {'n': n, 'm': m})
         else:
-            return HttpResponse("<h1>Input Error Occurred!<h1><h2>Error Message: <h2>%s must be greater than %s" % (n, m))
+            return HttpResponse("<h1>New Input Error Occurred!<h1><h2>Error Message: <h2>%s must be greater than %s" % (n, m))
