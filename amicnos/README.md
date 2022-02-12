@@ -1,0 +1,1 @@
+## Faculty Solutions for Question 4,5,6 in Sample Django Question
