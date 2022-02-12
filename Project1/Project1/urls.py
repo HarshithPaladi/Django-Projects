@@ -24,4 +24,5 @@ urlpatterns = [
     path("Rgen/", include("Random_Gen.urls")),
     path("test1/", include("test1.urls")),
     path("perfect_num/", include("perfect_num.urls")),
+    path("test_models/", include("test_models.urls")),
 ]

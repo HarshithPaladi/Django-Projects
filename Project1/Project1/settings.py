@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "Random_Gen",
     "test1",
     "perfect_num",
+    "test_models",
 ]
 
 MIDDLEWARE = [

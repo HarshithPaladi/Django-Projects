@@ -1,0 +1,32 @@
+{% extends 'bootstrap.html' %}
+{% block content %}
+<style>
+    table,th,td{
+        border: 3px solid black;
+        border-collapse: collapse;
+    }
+</style>
+<title>Django Models ig</title>
+<h1>Test Data</h1>
+<h2>Access Records are as follows: </h2>
+<div class="model">
+    {% if access_records %}
+    <table>
+        <thead>
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+        </thead>
+   
+    {% for access_record in access_records %}
+    <tr>
+        <td> {{access_record.name}}</td>
+        <td>{{access_record.date}}</td>
+    </tr>
+    {% endfor %}
+     </table>
+     {% else %}
+     <p>No access records found</p>
+    {% endif %}
+</div>
+
+{% endblock content %}
