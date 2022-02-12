@@ -1,0 +1,36 @@
+{% extends "bootstrap.html" %}
+{% block content %}
+<style>
+    table,
+    th,
+    td {
+        border: 3px solid black;
+        border-collapse: collapse;
+    }
+</style>
+<title>Django Models ig</title>
+<h1>Test Data</h1>
+<h2>User Records are as follows: </h2>
+<div class="user">
+    {% if users %}
+    <table>
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email ID</th>
+        </thead>
+        {% for rec in users %}
+        <tr>
+            <td>{{rec.first_name}}</td>
+            <td>{{rec.last_name}}</td>
+            <td>{{rec.email}}</td>
+        </tr>
+          
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No Users Found</p>
+    {% endif %}
+</div>
+
+{% endblock content %}
