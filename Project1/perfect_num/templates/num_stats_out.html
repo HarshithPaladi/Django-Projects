@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if n1 and n2 %}
+<h1>Numbers in range of {{n1}} to {{n2}}</h1>
+Perfect Numbers : {{perfect_num}} <br><br>
+Deficient Numbers : {{deficient_num}} <br><br>
+Abundant Numbers : {{abundant_num}} <br><br>
+<a href= {% url 'num_stats' %}> Try Again</a>
+{% endif %}
+{% if error %}
+<h1>Error</h1>
+{{error}}
+<br><br>
+<a href= {% url 'num_stats' %}> Try Again</a>
+{% endif %}
+{% endblock content %}

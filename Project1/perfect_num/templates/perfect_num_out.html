@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+    
+{% block content %}
+{% if lst %}
+    <h1>The List of Divisors of {{n}}: </h1>
+    {{lst}}
+{% endif %}
+
+{% if error %}
+<h1>Error Occurred </h1>
+<h2>{{error}}</h2>
+{% endif %}
+
+
+{% endblock %}

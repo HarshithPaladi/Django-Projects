@@ -2,5 +2,8 @@
     "cSpell.words": [
         "Fibanoci",
         "Rgen"
+    ],
+    "cSpell.enableFiletypes": [
+        "django-html"
     ]
 }

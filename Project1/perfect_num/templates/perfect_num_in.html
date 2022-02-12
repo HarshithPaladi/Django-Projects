@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>List of Divisors</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="n">
+        Enter a number:
+        <input type="text" name="n" id="n" value="{{ n }}">
+    </label>
+    <input type="submit"><br><br>
+        <a href= {% url 'choose' %}>
+        <button type = 'button'>
+            <h3>Go to Home Page</h3>
+        </button>
+    </a>
+</form>
+
+{% endblock %}

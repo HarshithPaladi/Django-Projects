@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> Number Status</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="n1">
+        Number 1:
+        <input type="text" name="n1" id="n1" value="{{ n1 }}">
+    </label> <br> <br>
+    <label for="n2">
+        Number 2:
+        <input type="text" name="n2" id="n2" value="{{ n2 }}">
+    </label><br><br>
+    <input type="submit" ><br><br>
+    <a href= {% url 'choose' %}>
+        <button type = 'button'>
+            <h3>Go to Home Page</h3>
+        </button>
+    </a>
+</form>
+
+{% endblock content %}
