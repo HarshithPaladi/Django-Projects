@@ -1,6 +1,5 @@
-{% extends "base.html" %}
+{% extends 'bootstrap.html' %}
 {% block content %}
-
 {% if error %}
 <h2>ERROR</h2>
 <p>{{error}} <br>
@@ -29,4 +28,4 @@
 {% if none%}
 <h2>Hello there</h2>
 {% endif %}
-{% endblock %}
+{% endblock content %}
