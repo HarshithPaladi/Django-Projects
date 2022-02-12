@@ -30,3 +30,10 @@ class User(models.Model):
     
     def __str__(self):
         return self.first_name
+
+class NewModel(models.Model):
+    name = models.CharField(max_length=264,unique=True)
+    email = models.EmailField(max_length=264,unique=True)
+    text = models.CharField(max_length=264)
+    def __str__(self):
+        return self.name

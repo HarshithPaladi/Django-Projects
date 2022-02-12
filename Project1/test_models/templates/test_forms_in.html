@@ -1,0 +1,9 @@
+{% extends "bootstrap.html" %}
+{% block content %}
+      <h2>Fill out the Form</h2>
+      <form action="" method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Click to Submit">
+      </form>
+{% endblock content %}
