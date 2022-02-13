@@ -27,4 +27,5 @@ urlpatterns = [
     path("test_models/", include("test_models.urls")),
     path("form1/", include("form1.urls")),
     path("ticketapp/", include("ticketapp.urls")),
+    path("groceryapp/", include("groceryapp.urls")),
 ]

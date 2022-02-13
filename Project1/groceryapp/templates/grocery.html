@@ -1,0 +1,53 @@
+{% extends "bootstrap.html" %}
+{% block content %}
+{% if form %}
+
+<h1>Grocery Store</h1>
+  <form action="" method="post">
+    <div class="form-group">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Click to Submit">
+  </form>
+
+{% endif %}
+
+{% if msg %}
+<div class="alert alert-success">
+  {{ msg }}
+<h2><a href="" {% url 'grocery' %}> Continue Shopping </a></h2>
+  
+{% endif %}
+{% if error %}
+<div class="alert alert-danger">
+  {{ error }}
+<h2><a href="" {% url 'grocery' %}> Continue Shopping </a></h2>
+  
+{% endif %}
+{% if items %}
+<h2>Grocery List</h2>
+<div class="data">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Per Item</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        {% for item in items %}
+        <tbody>
+            <tr>
+                <td scope="row">{{item.name}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.price_peritem}}</td>
+                <td>{{item.total_price}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+{% endif %}
+
+{% endblock content %}
