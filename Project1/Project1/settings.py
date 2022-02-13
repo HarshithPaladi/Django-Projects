@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "form1",
     "ticketapp",
     "groceryapp",
+    "test_login",
 ]
 
 MIDDLEWARE = [

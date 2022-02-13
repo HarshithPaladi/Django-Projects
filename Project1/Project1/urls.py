@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/',include('django.contrib.auth.urls')),
     path("App1/", include("App1.urls")),
     path("Add/", include("Add_app.urls")),
     path("Fibanoci/", include("Fibanoci.urls")),
@@ -28,4 +30,7 @@ urlpatterns = [
     path("form1/", include("form1.urls")),
     path("ticketapp/", include("ticketapp.urls")),
     path("groceryapp/", include("groceryapp.urls")),
+    path("test_login/", include("test_login.urls")),
+    path("logout/", auth_views.LogoutView.as_view(), name='logout'),
+
 ]
