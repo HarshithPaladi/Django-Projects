@@ -1,4 +1,3 @@
-from typing import Counter
 from django.http.response import HttpResponseGone
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
