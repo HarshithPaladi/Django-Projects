@@ -1,0 +1,16 @@
+{% extends "bootstrap.html" %}
+{% block content %}
+{% if form %}
+    <h2> Enter the details</h2>
+    <form action="" method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="submit" class="btn btn-primary" value="Click to Submit">
+    </form>
+{% endif %}
+{% if error %}
+  {{ error }}
+{% endif %}
+
+
+{% endblock content %}

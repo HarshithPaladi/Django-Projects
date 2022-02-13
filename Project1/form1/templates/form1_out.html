@@ -1,0 +1,44 @@
+{% extends "bootstrap.html" %}
+{% block content %}
+{% if data %}
+<style>
+    table,
+    th,
+    td {
+        border: 3px solid black;
+        border-collapse: collapse;
+    }
+</style>
+<title>Django Forms and Models</title>
+<h1>Test Data</h1>
+<div class="data">
+{% if data %}
+  <table class="table">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Email Address</th>
+              <th>Age</th>
+          </tr>
+      </thead>
+      {% for dat in data %}
+      <tbody>
+          <tr>
+              <td scope="row">{{dat.name}}</td>
+              <td>{{dat.email}}</td>
+              <td>{{dat.age}}</td>
+          </tr>
+      </tbody>
+    {% endfor %}
+  </table>
+{% else %}
+    <p>No Data Found</p>
+{% endif %}
+</div>
+
+{% else %}
+
+<h1>Form Submitted Successfully </h1>
+<h2><a href="" {% url 'form1_in' %}> To Fill another form Click here</a></h2>
+{% endif %}
+{% endblock content %}

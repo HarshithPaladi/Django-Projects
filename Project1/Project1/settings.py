@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "test1",
     "perfect_num",
     "test_models",
+    "form1",
 ]
 
 MIDDLEWARE = [

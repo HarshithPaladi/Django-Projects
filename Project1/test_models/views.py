@@ -30,4 +30,4 @@ def test_forms(request):
         
         else:
             print("Validation Failed")
-    return render(request,'test_forms_in.html',{'form':form_custom})
+    #return render(request,'test_forms_in.html',{'form':form_custom})
