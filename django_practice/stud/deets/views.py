@@ -1,7 +1,5 @@
 from lib2to3.pgen2.token import NUMBER
 
-from locale import MON_3
-from operator import imod
 import string
 from tokenize import Number
 from django.shortcuts import render
