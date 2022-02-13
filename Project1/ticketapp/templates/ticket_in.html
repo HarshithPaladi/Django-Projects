@@ -1,0 +1,26 @@
+{% extends "bootstrap.html" %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+{% if error %}
+  <h1>{{ error }}</h1>
+  <h2><a href="" {% url 'ticket_in' %}> Continue Booking </a></h2>
+{% endif %}
+</div>
+</div>
+{% if form %}
+  
+
+  <h2>Book our tickets Here</h2>
+  <form action="" method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" class="btn btn-primary" value="Click to Submit">
+  </form>
+  {% endif %}
+  {% if cost and msg %}
+    <h1>{{ msg }}</h1>
+    <h2><p>The cost of your ticket is ₹{{ cost }}</p></h2>
+    <h2><a href="" {% url 'ticket_in' %}> Continue Booking </a></h2>
+  {% endif %}
+{% endblock content %}

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "perfect_num",
     "test_models",
     "form1",
+    "ticketapp",
 ]
 
 MIDDLEWARE = [
@@ -114,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
