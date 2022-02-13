@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from .models import Topic, User,Webpage,AccessRecord
 from .forms import *
 # Create your views here.
@@ -21,4 +22,12 @@ def test_forms(request):
             print("Name: "+form_custom.cleaned_data['name'])
             print("Email: "+form_custom.cleaned_data['email'])
             print("Text: "+form_custom.cleaned_data['text'])
-        return render(request,'test_forms_out.html',{'form_custom':form_custom})
+            form_custom.save(commit=True)
+            form_custom.clean()
+            #return test_forms(request)
+            return render(request,'test_forms_out.html',{'form':form_custom})
+            #return HttpResponse("<h1>Form Submitted Successfully <h2><a href="" {% url 'test_forms' %}> To Fill another form Click here</a></h2></h1>")
+        
+        else:
+            print("Validation Failed")
+    return render(request,'test_forms_in.html',{'form':form_custom})
