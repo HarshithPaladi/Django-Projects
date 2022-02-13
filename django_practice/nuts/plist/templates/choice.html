@@ -1,0 +1,13 @@
+<form method ="POST">
+    <label>WHAT YOU WANT TO BUY:</label>
+    <select name ="buy">
+        {% for s in plist %}
+            <option>{{s.nut}}</option>
+            <option>{{s.dry_fruit}}</option>
+        {% endfor %}
+    </select>
+    {% csrf_token %}
+    <input type = "submit" >
+</form>
+    <br>
+    <br>

@@ -1,0 +1,27 @@
+<h1>Students db</h1>
+<table border="1">
+
+    <tr>
+        <th>Name</th>
+        <th>Register_no</th>
+        <th>Mark1</th>
+        <th>Grade1</th>
+        <th>Mark2</th>
+        <th>Grade2</th>
+        <th>Mark3</th>
+        <th>Grade3</th>
+    </tr>
+{% for record in records %}
+<tr>
+    <td>{{record.name}}</td>
+    <td>{{record.register_no}}</td>
+    <td>{{record.mark_1}}</td>
+    <td>{{record.grade_1}}</td>
+    <td>{{record.mark_2}}</td>
+    <td>{{record.grade_2}}</td>
+    <td>{{record.mark_3}}</td>
+    <td>{{record.grade_3}}</td>
+</tr>
+
+{% endfor %}
+</table>

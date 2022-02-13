@@ -1,0 +1,19 @@
+<h1>PRICE LISTS</h1>
+<table border="1">
+
+    <tr>
+        <th>NUT</th>
+        <th>PRICE_PER_KILO</th>
+        <th>DRY_FRUIT</th>
+        <th>PRICE_PER_KILO</th>
+    </tr>
+{% for list in s %}
+<tr>
+    <td>{{list.nut}}</td>
+    <td>{{list.price_per_kilo}}</td>
+    <td>{{list.dry_fruit}}</td>
+    <td>{{list.price_per_kilo}}</td>
+</tr>
+
+{% endfor %}
+</table>
